@@ -2,13 +2,13 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Habibullah",
+  firstName: "Habib",
   lastName: "Hussaini",
-  name: "Habibullah Hussaini",
+  name: "Habib Hussaini",
   role: "Senior Graphic Designer & Project Coordinator",
   avatar: "/images/avatar.jpg",
   email: "24.hussaini@gmail.com",
-  location: "Asia/Kabul",
+  location: "Kabul - Afghanistan",
   languages: ["Dari", "English"],
 };
 
@@ -25,25 +25,19 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://github.com/habibullah-1101",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "https://www.instagram.com/by.habib_hussaini?igsh=MTFuc3QzeXA3ZXVqOQ%3D%3D&utm_source=qr",
     essential: false,
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "facebook",
+    icon: "facebook",
+    link: "https://www.facebook.com/share/1DBiPGcn8u/?mibextid=wwXIfr",
     essential: true,
   },
   {
