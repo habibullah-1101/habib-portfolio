@@ -14,7 +14,7 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+const baseURL: string = "https://habibstudiopro.com";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -32,9 +32,7 @@ const display: DisplayConfig = {
 
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
-const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
-};
+const protectedRoutes: ProtectedRoutesConfig = {};
 
 // Import and set font for each variant
 import { Geist } from "next/font/google";
@@ -187,28 +185,28 @@ const mailchimp: MailchimpConfig = {
 // default schema data
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Person",
+  name: "Habibullah Hussaini",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "24.hussaini@gmail.com",
 };
 
 // social links
-const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+const sameAs = {
+  instagram: "https://www.instagram.com/by.habib_hussaini?igsh=MTFuc3QzeXA3ZXVqOQ%3D%3D&utm_source=qr",
+  facebook: "https://www.facebook.com/share/1DBiPGcn8u/?mibextid=wwXIfr",
+  whatsapp: "https://wa.me/message/MPH2OXAAUN7AI1",
 };
 
 // social sharing configuration for blog posts
 const socialSharing: SocialSharingConfig = {
   display: true,
   platforms: {
-    x: true,
-    linkedin: true,
-    facebook: false,
+    x: false,
+    linkedin: false,
+    facebook: true,
     pinterest: false,
-    whatsapp: false,
+    whatsapp: true,
     reddit: false,
     telegram: false,
     email: true,
