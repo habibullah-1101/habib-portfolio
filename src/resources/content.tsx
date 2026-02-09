@@ -60,7 +60,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Branding that prints clean. Design that works in real life.</>,,
+  headline: <>Branding that prints clean. Design that works in real life.</>,
   featured: {
     display: true,
     title: (
@@ -102,7 +102,6 @@ const about: About = {
     display: true,
     title: "Introduction",
     description: (
-      description: (
   <>
     I care about one thing: design has to work in the real world.  
     A logo or a visual identity should not only look good on screen, it must also work on signage, packaging, print materials, and social media.  
@@ -121,7 +120,7 @@ const about: About = {
         achievements: [
   <>Designed visual identities and print systems for real projects (signage, packaging, stationery, and marketing materials).</>,
   <>Managed the production workflow: print-ready files, quality control, and follow-up with print shops.</>,
-  <>Created social media content and project videos using Premiere Pro and After Effects.</>,,
+  <>Created social media content and project videos using Premiere Pro and After Effects.</>,
 
 
   <>Worked on multi-branch branding projects, from site measurement to final design, printing, and installation.</>,
