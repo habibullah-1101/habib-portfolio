@@ -1,77 +1,89 @@
-# Habib Hussaini — Portfolio
+Portfolio
 
-Personal portfolio website of **Habibullah Hussaini**  
-Senior Graphic Designer & Project Coordinator based in Kabul.
+Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
 
-This website showcases my work in:
-- Brand identity & visual systems  
-- Print production & prepress  
-- Real-world branding projects (from design to installation)  
-- Social media visuals and motion/video content  
+View the demo [here](https://demo.magic-portfolio.com).
 
-🌐 Live website: https://habibstudiopro.com
+![Magic Portfolio](public/images/og/home.jpg)
 
----
+## Getting started
 
-**Tech Stack**
+**1. Clone the repository**
+```
+git clone https://github.com/once-ui-system/magic-portfolio.git
+```
 
-- Next.js  
-- React  
-- Once UI  
-- TypeScript  
-- MDX  
-- Sass  
-
----
-
-**Local Development**
-
-Clone the repository:
-
-```bash
-git clone https://github.com/habibullah-1101/habib-portfolio.git ```
-
-Install dependencies:
-
-```bash
+**2. Install dependencies**
+```
 npm install
+```
 
-
-Run the development server:
-
-```bash
+**3. Run dev server**
+```
 npm run dev
+```
 
+**4. Edit config**
+```
+src/resources/once-ui.config.js
+```
 
-Build for production:
+**5. Edit content**
+```
+src/resources/content.js
+```
 
-```bash
-npm run build
+**6. Create blog posts / projects**
+```
+Add a new .mdx file to src/app/blog/posts or src/app/work/projects
+```
 
+Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
----
+## Documentation
 
-**Customization**
+Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
 
-Main content and settings are located here:
+## Features
 
-- `src/resources/content.tsx` → Texts, bio, social links, and page content  
-- `src/resources/once-ui.config.ts` → Branding, theme, SEO, and domain settings  
-- `src/app/work/projects/*.mdx` → Portfolio projects  
-- `public/images/` → Images and assets  
+### Once UI
+- All tokens, components & features of [Once UI](https://once-ui.com)
 
----
+### SEO
+- Automatic open-graph and X image generation with next/og
+- Automatic schema and metadata generation based on the content file
 
-**Deployment**
+### Design
+- Responsive layout optimized for all screen sizes
+- Timeless design without heavy animations and motion
+- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
 
-This project is deployed on **Vercel**.  
-Every push to the `main` branch triggers an automatic deployment.
+### Content
+- Render sections conditionally based on the content file
+- Enable or disable pages for blog, work, gallery and about / CV
+- Generate and display social links automatically
+- Set up password protection for URLs
 
----
+### Localization
+- A localized, earlier version of Magic Portfolio is available with the next-intl library
+- To use localization, switch to the 'i18n' branch
 
-**License**
+## Creators
 
-This portfolio is based on the **Magic Portfolio / Once UI** template.  
-The template is licensed under **CC BY-NC 4.0** (non-commercial).
+Lorant One: [Threads](https://www.threads.net/@lorant.one) / [LinkedIn](https://www.linkedin.com/in/lorant-one/)
 
-Content, images, and personal branding belong to **Habibullah Hussaini**.
+## Get involved
+
+- Join the Design Engineers Club on [Discord](https://discord.com/invite/5EyAQ4eNdS) and share your project with us!
+- Deployed your docs? Share it on the [Once UI Hub](https://once-ui.com/hub) too! We feature our favorite apps on our landing page.
+
+## License
+
+Distributed under the CC BY-NC 4.0 License.
+- Attribution is required.
+- Commercial usage is not allowed.
+- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
+
+See `LICENSE.txt` for more information.
+
+## Deploy with Vercel
