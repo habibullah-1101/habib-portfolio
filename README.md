@@ -33,17 +33,17 @@ git clone https://github.com/habibullah-1101/habib-portfolio.git
 
 
 
-**2. Install dependencies**
+## Install dependencies
 ```
 npm install
 ```
 
-**3. Run dev server**
+## Run dev server
 ```
 npm run dev
 ```
 
-**4. Customization
+## Customization
 
 Main content and settings are located here:
 	•	src/resources/content.tsx → Texts, bio, social links, and page content
@@ -53,13 +53,13 @@ Main content and settings are located here:
 
 
 
-**5. Deployment
+## Deployment
 
 This project is deployed on Vercel.
 Every push to the main branch triggers an automatic deployment.
 
 
-**6. License
+## License
 
 This portfolio is based on the Magic Portfolio / Once UI template.
 The template is licensed under CC BY-NC 4.0 (non-commercial).
