@@ -30,3 +30,8 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/habibullah-1101/habib-portfolio.git
+
+Install dependencies:
+
+```bash
+npm install
