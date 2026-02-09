@@ -8,7 +8,7 @@ const person: Person = {
   role: "Senior Graphic Designer & Project Coordinator",
   avatar: "/images/avatar.jpg",
   email: "24.hussaini@gmail.com",
-  location: "Asia/Kabul",
+  location: "Asia/Kabul", 
   languages: ["Dari", "English"],
 };
 
