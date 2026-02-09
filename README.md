@@ -28,19 +28,26 @@ This website showcases my work in:
 
 Clone the repository:
 
+```bash
 git clone https://github.com/habibullah-1101/habib-portfolio.git
+
 
 
 Install dependencies:
 
+```bash
 npm install
+
 
 Run the development server:
 
+```bash
 npm run dev
+
 
 Build for production:
 
+```bash
 npm run build
 
 
