@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Habibullah",
+  lastName: "Hussaini",
+  name: "Habibullah Hussaini",
+  role: "Senior Graphic Designer & Project Coordinator",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "24.hussaini@gmail.com",
+  location: "Asia/Kabul",
+  languages: ["Dari", "English"],
 };
 
 const newsletter: Newsletter = {
@@ -60,7 +60,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Branding that prints clean. Design that works in real life.</>,,
   featured: {
     display: true,
     title: (
@@ -75,9 +75,10 @@ const home: Home = {
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
-    <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+  <>
+    I’m Habibullah, a graphic designer and project coordinator based in Kabul.  
+    I work on brand identity, print-ready design, and real-world execution from concept and layout to production and installation.
+  </>
   ),
 };
 
@@ -101,11 +102,12 @@ const about: About = {
     display: true,
     title: "Introduction",
     description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
+      description: (
+  <>
+    I care about one thing: design has to work in the real world.  
+    A logo or a visual identity should not only look good on screen, it must also work on signage, packaging, print materials, and social media.  
+    My experience combines graphic design, print production, and hands-on project coordination — from preparing files to final delivery and installation.
+  </>
     ),
   },
   work: {
@@ -117,15 +119,14 @@ const about: About = {
         timeframe: "2022 - Present",
         role: "Senior Design Engineer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
+  <>Designed visual identities and print systems for real projects (signage, packaging, stationery, and marketing materials).</>,
+  <>Managed the production workflow: print-ready files, quality control, and follow-up with print shops.</>,
+  <>Created social media content and project videos using Premiere Pro and After Effects.</>,,
+
+
+  <>Worked on multi-branch branding projects, from site measurement to final design, printing, and installation.</>,
+  <>Handled multiple deliverables in parallel while keeping visual standards consistent and deadlines on track.</>,
+],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
