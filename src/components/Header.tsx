@@ -73,7 +73,7 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-         {display.location && <Row s={{ hide: true }}>Kabul, Afghanistan</Row>}
+      location: "Asia/Kabul",
         </Row>
         <Row fillWidth horizontal="center">
           <Row
