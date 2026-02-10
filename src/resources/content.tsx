@@ -182,7 +182,7 @@ technical: {
       images: [],
     },
   ],
-}
+
 };
   
   const blog: Blog = {
