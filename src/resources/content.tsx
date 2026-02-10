@@ -66,7 +66,7 @@
           </Text>
         </Row>
       ),
-      href: "/work/atoma-gardez-branding.mdx",
+      href: "/work/atoma-gardez",
     },
     subline: (
     <>
@@ -108,9 +108,9 @@
       title: "Work Experience",
       experiences: [
         {
-          company: "FLY",
+          company: "Ahmadi Printing Press",
           timeframe: "2022 - Present",
-          role: "Senior Design Engineer",
+          role: "Senior Graphic Designer",
           achievements: [
     <>Designed visual identities and print systems for real projects (signage, packaging, stationery, and marketing materials).</>,
     <>Managed the production workflow: print-ready files, quality control, and follow-up with print shops.</>,
@@ -123,8 +123,8 @@
           images: [
             // optional: leave the array empty if you don't want to display images
             {
-              src: "/images/projects/project-01/cover-01.jpg",
-              alt: "Once UI Project",
+              src: "/images/projects/atoma-gardez/cover-01.jpg",
+              alt: "ATOMA Gardez Branding",
               width: 16,
               height: 9,
             },
