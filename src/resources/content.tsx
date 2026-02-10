@@ -159,33 +159,35 @@ studies: {
   ],
 },
  
-technical: {
-  display: true,
-  title: "Technical Skills",
-  skills: [
-    {
-      title: "Brand Identity & Visual Systems",
-      description: <>Logo design, brand guidelines, typography, and consistent visuals across all touchpoints.</>,
-      tags: [{ name: "Branding", icon: "sparkle" }],
-      images: [],
-    },
-    {
-      title: "Print Production / Prepress",
-      description: <>Professional print preparation: bleed, export settings, color checks, and production coordination.</>,
-      tags: [{ name: "Print", icon: "printer" }],
-      images: [],
-    },
-    {
-      title: "Adobe Suite",
-      description: <>Photoshop, Illustrator, CorelDRAW + motion/video with After Effects and Premiere Pro.</>,
-      tags: [{ name: "Adobe", icon: "settings" }],
-      images: [],
-    },
-  ],
-
-};
+      
   
-  const blog: Blog = {
+      technical: {
+      display: true,
+      title: "Technical Skills",
+      skills: [
+        {
+          title: "Brand Identity & Visual Systems",
+          description: <>Logo design, brand guidelines, typography, and consistent visuals across all touchpoints.</>,
+          tags: [{ name: "Branding", icon: "sparkle" }],
+          images: [],
+        },
+        {
+          title: "Print Production / Prepress",
+          description: <>Professional print preparation: bleed, export settings, color checks, and production coordination.</>,
+          tags: [{ name: "Print", icon: "printer" }],
+          images: [],
+        },
+        {
+          title: "Adobe Suite",
+          description: <>Photoshop, Illustrator, CorelDRAW + motion/video with After Effects and Premiere Pro.</>,
+          tags: [{ name: "Adobe", icon: "settings" }],
+          images: [],
+        },
+      ],
+    },
+  };
+
+const blog: Blog = {
     path: "/blog",
     label: "Blog",
     title: "Writing about design and tech...",
