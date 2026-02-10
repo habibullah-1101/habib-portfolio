@@ -66,7 +66,7 @@
           </Text>
         </Row>
       ),
-      href: "/work/atoma-gardez.mdx",
+      href: "/work/atoma-gardez-branding.mdx",
     },
     subline: (
     <>
