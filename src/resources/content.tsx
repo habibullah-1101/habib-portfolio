@@ -59,14 +59,14 @@
       display: true,
       title: (
         <Row gap="12" vertical="center">
-          <strong className="ml-4">Once UI</strong>{" "}
+          <strong className="ml-4">ATOMA</strong>{" "}
           <Line background="brand-alpha-strong" vert height="20" />
           <Text marginRight="4" onBackground="brand-medium">
             Featured work
           </Text>
         </Row>
       ),
-      href: "/work/atoma-gardez",
+      href: "/work/atoma-gardez.mdx",
     },
     subline: (
     <>
