@@ -160,7 +160,6 @@ studies: {
 },
  
       
-  
       technical: {
       display: true,
       title: "Technical Skills",
@@ -186,6 +185,7 @@ studies: {
       ],
     },
   };
+
 
 const blog: Blog = {
     path: "/blog",
