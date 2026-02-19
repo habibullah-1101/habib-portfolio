@@ -1,12 +1,12 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 
 const person: Person = {
-  firstName: "Habibullah",
+  firstName: "Habib",
   lastName: "Hussaini",
   name: "Habib",
-  role: "Senior Graphic Designer & Brand Designer",
+  role: "Graphic Designer",
   avatar: "/images/avatar.jpg",
-  email: "habibstudio.agency@gmail.com",
+  email: "24.hussaini@gmail.com",
   location: "Kabul, Afghanistan" as Person["location"],
   languages: ["Dari", "English", "Pashto"],
 };
@@ -14,7 +14,7 @@ const person: Person = {
 const newsletter: Newsletter = {
   display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>My weekly newsletter about creativity and Graphic Design</>,
 };
 
 const social: Social = [
@@ -36,15 +36,15 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: "Habibullah Hussaini — Graphic Designer & Brand Designer",
+  title: "Habib Hussaini — Graphic Designer",
   description: "Senior Graphic Designer specializing in branding, print, and real-world visual systems.",
-  headline: <>Senior Graphic Designer & Brand Designer</>,
+  headline: <>Senior Graphic Designer</>,
   featured: {
     display: false,
     title: <></>,
     href: "/work",
   },
-  subline: <>Senior Graphic Designer specializing in branding, print, and real-world visual systems.</>,
+  subline: <>Graphic Designer specializing in branding, print, and real-world visual systems.</>,
 };
 
 const about: About = {
