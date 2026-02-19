@@ -3,7 +3,7 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 const person: Person = {
   firstName: "Habib",
   lastName: "Hussaini",
-  name: "Habib",
+  name: "Habib Hussaini",
   role: "Graphic Designer",
   avatar: "/images/avatar.jpg",
   email: "24.hussaini@gmail.com",
@@ -105,7 +105,7 @@ const about: About = {
         images: [],
       },
       {
-        company: "Habib Studio Agency",
+        company: "Freelancig",
         timeframe: "2023 – Present",
         role: "Founder",
         achievements: [
@@ -151,10 +151,10 @@ const about: About = {
       {
         title: "Professional Skills",
         tags: [
-          { name: "Photoshop" },
-          { name: "Illustrator" },
-          { name: "CorelDraw" },
-          { name: "Premiere Pro" },
+          { name: "Photoshop", icon: "photoshop" },
+          { name: "Illustrator", icon: "illustrator" },
+          { name: "CorelDraw", icon: "coreldraw" },
+          { name: "Premiere Pro", icon: "premiere" },
           { name: "Figma", icon: "figma" },
           { name: "Branding" },
           { name: "Print Production" },
