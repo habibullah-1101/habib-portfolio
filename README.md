@@ -1,91 +1,95 @@
-# Magic Portfolio
+# habib-portfolio
 
-Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
+Habib Portfolio is the personal website of **Habib Hussaini (Habib)**, a **Senior Graphic Designer** focused on branding, print, and real-world visual systems. This project presents his services, selected projects, and professional profile.
 
-View the demo [here](https://demo.magic-portfolio.com).
+## Live Demo
 
-![Magic Portfolio](public/images/og/home.jpg)
-
-## Getting started
-
-**1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
-
-**2. Install dependencies**
-```
-npm install
-```
-
-**3. Run dev server**
-```
-npm run dev
-```
-
-**4. Edit config**
-```
-src/resources/once-ui.config.js
-```
-
-**5. Edit content**
-```
-src/resources/content.js
-```
-
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
-
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
-
-## Documentation
-
-Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
+- **URL:** TODO (add the production URL)
+- Note: The current `baseURL` in config still points to a template demo URL and should be updated for production.
 
 ## Features
 
-### Once UI
-- All tokens, components & features of [Once UI](https://once-ui.com)
+- Home page with designer profile intro and highlighted work.
+- About page with introduction, work experience, services, and skills.
+- Work/projects section using MDX project files.
+- Gallery page for image-based portfolio content.
+- Optional blog system (implemented in code, currently disabled in route config).
+- SEO helpers including metadata, sitemap, robots, RSS, and Open Graph image routes.
+- Route toggles and optional password-protected routes via config.
+- Theme switching support.
 
-### SEO
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+## Tech Stack
 
-### Design
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **UI System:** Once UI (`@once-ui-system/core`)
+- **Content format:** MDX
+- **Deployment target:** Vercel
 
-### Content
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+## Project Structure
 
-### Localization
-- A localized, earlier version of Magic Portfolio is available with the next-intl library
-- To use localization, switch to the 'i18n' branch
+Key directories and files:
 
-## Creators
+- `src/app` – App Router pages, API routes, and MDX content routes.
+- `src/components` – Shared UI and feature components.
+- `src/resources/content.tsx` – Main portfolio content (personal info, sections, labels).
+- `src/resources/once-ui.config.ts` – App/site configuration (routes, styling, SEO base URL, etc.).
+- `public/images` – Portfolio and gallery image assets.
 
-Lorant One: [Threads](https://www.threads.net/@lorant.one) / [LinkedIn](https://www.linkedin.com/in/lorant-one/)
+## Getting Started
 
-## Get involved
+### Prerequisites
 
-- Join the Design Engineers Club on [Discord](https://discord.com/invite/5EyAQ4eNdS) and share your project with us!
-- Deployed your docs? Share it on the [Once UI Hub](https://once-ui.com/hub) too! We feature our favorite apps on our landing page.
+- Node.js 18.17+ (or a newer LTS version)
+- npm
+
+### Install
+
+```bash
+npm install
+```
+
+### Run development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## Environment Variables
+
+This project currently uses:
+
+- `PAGE_ACCESS_PASSWORD` (optional): Enables password checks for protected routes when configured.
+
+Chatbot note:
+
+- `OPENAI_API_KEY`: TODO (no chatbot/OpenAI integration was found in the current codebase; add this only if chatbot functionality is implemented).
+
+## Deployment (Vercel)
+
+1. Push this repository to GitHub.
+2. Import the repo into Vercel.
+3. Set required environment variables in Vercel Project Settings.
+4. Deploy.
+
+## Customization
+
+- Edit portfolio content in: `src/resources/content.tsx`
+- Edit configuration (routes, base URL, style, SEO defaults) in: `src/resources/once-ui.config.ts`
+- Add/update images in:
+  - `public/images`
+  - `src/resources` (for resource/config references)
 
 ## License
 
-Distributed under the CC BY-NC 4.0 License.
-- Attribution is required.
-- Commercial usage is not allowed.
-- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
+Licensed under **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**. See `LICENSE` for details.
 
-See `LICENSE.txt` for more information.
+## Credits / Author
 
-## Deploy with Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+Designed & built by Habib Hussaini.
