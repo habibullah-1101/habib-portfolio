@@ -14,13 +14,13 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+const baseURL: string = "https://habibstudiopro.com";
 
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": false,
+  "/blog": true,
   "/gallery": true,
 };
 
@@ -188,7 +188,7 @@ const schema: SchemaConfig = {
   type: "Organization",
   name: "Habibullah Hussaini",
   description: home.description,
-  email: "habibstudio.agency@gmail.com",
+  email: "24.hussaini@gmail.com",
 };
 
 // social links
