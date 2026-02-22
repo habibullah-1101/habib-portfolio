@@ -303,7 +303,12 @@ export default function About() {
                     {skill.tags && skill.tags.length > 0 && (
                       <Row wrap gap="8" paddingTop="8">
                         {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                          <Tag
+                            key={`${skill.title}-${tagIndex}`}
+                            size="l"
+                            prefixIcon={tag.icon}
+                            className={index === 0 ? "professional-skill-pill" : undefined}
+                          >
                             {tag.name}
                           </Tag>
                         ))}
@@ -337,6 +342,50 @@ export default function About() {
           )}
         </Column>
       </Row>
+      <style>{`
+        .professional-skill-pill {
+          min-height: 46px;
+          padding: 10px 16px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: inherit;
+          transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease,
+            background-color 180ms ease;
+          will-change: transform;
+        }
+
+        .professional-skill-pill svg {
+          width: 21px;
+          height: 21px;
+          opacity: 0.82;
+          transition: opacity 180ms ease;
+        }
+
+        .professional-skill-pill:hover {
+          transform: translateY(-2px);
+          border-color: rgba(255, 255, 255, 0.25);
+          box-shadow: 0 8px 22px rgba(255, 255, 255, 0.1);
+        }
+
+        .professional-skill-pill:hover svg {
+          opacity: 1;
+        }
+
+        .professional-skill-pill:active {
+          transform: scale(0.98);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .professional-skill-pill,
+          .professional-skill-pill svg {
+            transition: border-color 180ms ease, opacity 180ms ease;
+          }
+
+          .professional-skill-pill:hover,
+          .professional-skill-pill:active {
+            transform: none;
+          }
+        }
+      `}</style>
     </Column>
   );
 }
