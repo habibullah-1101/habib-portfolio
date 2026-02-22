@@ -28,6 +28,19 @@ export async function generateMetadata() {
 }
 
 export default function About() {
+
+const skillTagIcons: Record<string, string> = {
+  Photoshop: "/icons/skills/photoshop.svg",
+  Illustrator: "/icons/skills/illustrator.svg",
+  CorelDraw: "/icons/skills/coreldraw.svg",
+  "Premiere Pro": "/icons/skills/premiere.svg",
+  Figma: "/icons/skills/figma.svg",
+  Branding: "/icons/skills/branding.svg",
+  "Print Production": "/icons/skills/print-production.svg",
+  Signage: "/icons/skills/signage.svg",
+  "Project Management": "/icons/skills/project-management.svg",
+};
+
   const structure = [
     {
       title: about.intro.title,
@@ -302,11 +315,29 @@ export default function About() {
                     </Text>
                     {skill.tags && skill.tags.length > 0 && (
                       <Row wrap gap="8" paddingTop="8">
-                        {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
-                            {tag.name}
-                          </Tag>
-                        ))}
+                        {skill.tags.map((tag, tagIndex) => {
+                          const skillIcon = skillTagIcons[tag.name];
+
+                          return (
+                            <Tag key={`${skill.title}-${tagIndex}`} size="l">
+                              <Row vertical="center" gap="8">
+                                {skillIcon ? (
+                                  <object
+                                    aria-label={`${tag.name} icon`}
+                                    data={skillIcon}
+                                    type="image/svg+xml"
+                                    style={{ width: 16, height: 16, display: "block", color: "currentColor" }}
+                                  >
+                                    {tag.icon ? <Icon name={tag.icon} size="s" /> : <Icon name="grid" size="s" />}
+                                  </object>
+                                ) : (
+                                  <Icon name={tag.icon ?? "grid"} size="s" />
+                                )}
+                                <span>{tag.name}</span>
+                              </Row>
+                            </Tag>
+                          );
+                        })}
                       </Row>
                     )}
                     {skill.images && skill.images.length > 0 && (
