@@ -28,36 +28,6 @@ export async function generateMetadata() {
   });
 }
 
-import {
-  Heading,
-  Text,
-  Button,
-  Avatar,
-  RevealFx,
-  Column,
-  Badge,
-  Row,
-  Schema,
-  Meta,
-  Line,
-  Background,
-} from "@once-ui-system/core";
-
-import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
-import { Posts } from "@/components/blog/Posts";
-
-export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
-  });
-}
-
 export default function Home() {
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
@@ -83,7 +53,7 @@ export default function Home() {
           height="16"
           gradient={{
             display: true,
-            opacity: 1,
+            opacity: 100,
             x: 50,
             y: 0,
             colorStart: "accent-background-strong",
@@ -91,7 +61,7 @@ export default function Home() {
           }}
           lines={{
             display: true,
-            opacity: 1,
+            opacity: 100,
             size: "16",
             thickness: 1,
             angle: 90,
@@ -99,7 +69,7 @@ export default function Home() {
           }}
           dots={{
             display: true,
-            opacity: 1,
+            opacity: 100,
             size: "4",
             color: "page-background",
           }}
@@ -111,7 +81,7 @@ export default function Home() {
           height={16}
           gradient={{
             display: true,
-            opacity: 1,
+            opacity: 100,
             x: 50,
             y: 100,
             width: 50,
