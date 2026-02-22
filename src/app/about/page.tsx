@@ -322,14 +322,13 @@ const skillTagIcons: Record<string, string> = {
                             <Tag key={`${skill.title}-${tagIndex}`} size="l">
                               <Row vertical="center" gap="8">
                                 {skillIcon ? (
-                                  <object
-                                    aria-label={`${tag.name} icon`}
-                                    data={skillIcon}
-                                    type="image/svg+xml"
-                                    style={{ width: 16, height: 16, display: "block", color: "currentColor" }}
-                                  >
-                                    {tag.icon ? <Icon name={tag.icon} size="s" /> : <Icon name="grid" size="s" />}
-                                  </object>
+                                  <img
+                                    alt={`${tag.name} icon`}
+                                    src={skillIcon}
+                                    width={16}
+                                    height={16}
+                                    style={{ width: 16, height: 16, display: "block" }}
+                                  />
                                 ) : (
                                   <Icon name={tag.icon ?? "grid"} size="s" />
                                 )}
