@@ -10,6 +10,7 @@ import {
   Schema,
   Meta,
   Line,
+  Background,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
@@ -26,59 +27,58 @@ export async function generateMetadata() {
   });
 }
 
-<div className="relative overflow-hidden">
-  {/* Background effects */}
-  <Background
-    fill
-    height="16"
-    gradient={{ 
-      display: true, 
-      opacity: 1,
-      x: 50,
-      y: 0,
-      colorStart: "accent-background-strong",
-      colorEnd: "static-transparent"
-    }}
-    lines={{
-      display: true,
-      opacity: 1,
-      size: "16",
-      thickness: 1,
-      angle: 90,
-      color: "accent-background-strong"
-    }}
-    dots={{
-      display: true,
-      opacity: 1,
-      size: "4",
-      color: "page-background"
-    }}
-  />
 
-  <Background
-    position="absolute"
-    fill
-    height={16}
-    gradient={{ 
-      display: true, 
-      opacity: 1,
-      x: 50,
-      y: 100,
-      width: 50,
-      colorStart: "brand-background-weak",
-      colorEnd: "static-transparent"
-    }}
-  />
-
-  {/* Hero content */}
-  <div className="relative z-10">
-    {/* اینجا تیتر و دکمه‌ها و محتوای Hero */}
-  </div>
-</div>
 
 export default function Home() {
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
+            {/* Hero Wrapper */}
+      <div className="relative overflow-hidden rounded-3xl w-full">
+        {/* Background effects */}
+        <Background
+          fill
+          height="16"
+          gradient={{ 
+            display: true, 
+            opacity: 1,
+            x: 50,
+            y: 0,
+            colorStart: "accent-background-strong",
+            colorEnd: "static-transparent"
+          }}
+          lines={{
+            display: true,
+            opacity: 1,
+            size: "16",
+            thickness: 1,
+            angle: 90,
+            color: "accent-background-strong"
+          }}
+          dots={{
+            display: true,
+            opacity: 1,
+            size: "4",
+            color: "page-background"
+          }}
+        />
+
+        <Background
+          position="absolute"
+          fill
+          height={16}
+          gradient={{ 
+            display: true, 
+            opacity: 1,
+            x: 50,
+            y: 100,
+            width: 50,
+            colorStart: "brand-background-weak",
+            colorEnd: "static-transparent"
+          }}
+        />
+
+        {/* Hero content */}
+        <div className="relative z-10"></div>
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -92,6 +92,8 @@ export default function Home() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+
+      <div className="relative z-10">
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
           {home.featured.display && (
@@ -150,6 +152,9 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+</div>
+        </div>
+      </div>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
