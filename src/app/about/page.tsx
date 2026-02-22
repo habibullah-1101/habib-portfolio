@@ -303,9 +303,27 @@ export default function About() {
                     {skill.tags && skill.tags.length > 0 && (
                       <Row wrap gap="8" paddingTop="8">
                         {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
-                            {tag.name}
-                          </Tag>
+                          <button
+                            key={`${skill.title}-${tagIndex}`}
+                            type="button"
+                            className="skill-pill"
+                            aria-label={tag.name}
+                            title={tag.name}
+                            data-tooltip={tag.name}
+                          >
+                            {((tag as { logo?: string }).logo || tag.icon)?.startsWith("/") ? (
+                              <img
+                                src={(tag as { logo?: string }).logo || tag.icon}
+                                alt=""
+                                aria-hidden="true"
+                                className="skill-pill-icon"
+                              />
+                            ) : tag.icon ? (
+                              <Icon name={tag.icon as never} size="s" className="skill-pill-icon-fallback" />
+                            ) : (
+                              <Icon name="sparkles" size="s" className="skill-pill-icon-fallback" />
+                            )}
+                          </button>
                         ))}
                       </Row>
                     )}
@@ -337,6 +355,122 @@ export default function About() {
           )}
         </Column>
       </Row>
+      <style>{`
+        .skill-pill {
+          position: relative;
+          width: 44px;
+          height: 36px;
+          border-radius: 999px;
+          border: 1px solid rgba(148, 163, 184, 0.35);
+          background: rgba(15, 23, 42, 0.24);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          cursor: pointer;
+          transition: transform 180ms ease, box-shadow 220ms ease, border-color 220ms ease,
+            background-color 220ms ease;
+          overflow: hidden;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        .skill-pill::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.18) 50%, transparent 80%);
+          transform: translateX(-145%);
+          transition: transform 340ms ease;
+          pointer-events: none;
+        }
+
+        .skill-pill::after {
+          content: attr(data-tooltip);
+          position: absolute;
+          left: 50%;
+          bottom: calc(100% + 8px);
+          transform: translateX(-50%) translateY(4px);
+          background: rgba(15, 23, 42, 0.9);
+          backdrop-filter: blur(4px);
+          color: #e2e8f0;
+          border-radius: 8px;
+          padding: 4px 8px;
+          font-size: 11px;
+          line-height: 1;
+          letter-spacing: 0.01em;
+          white-space: nowrap;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 160ms ease, transform 160ms ease;
+        }
+
+        .skill-pill:hover,
+        .skill-pill:focus-visible {
+          transform: translateY(-2px);
+          border-color: rgba(96, 165, 250, 0.6);
+          box-shadow: 0 0 0 1px rgba(96, 165, 250, 0.45), 0 8px 18px rgba(96, 165, 250, 0.16);
+          background: rgba(15, 23, 42, 0.4);
+        }
+
+        .skill-pill:hover::before,
+        .skill-pill:focus-visible::before {
+          transform: translateX(145%);
+        }
+
+        .skill-pill:hover::after,
+        .skill-pill:focus-visible::after,
+        .skill-pill:active::after {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+
+        .skill-pill:active {
+          transform: scale(0.98);
+        }
+
+        .skill-pill-icon {
+          width: 20px;
+          height: 20px;
+          object-fit: contain;
+          filter: saturate(0.92) brightness(0.94);
+          transition: filter 220ms ease;
+        }
+
+        .skill-pill-icon-fallback {
+          opacity: 0.85;
+          transition: opacity 220ms ease;
+        }
+
+        .skill-pill:hover .skill-pill-icon,
+        .skill-pill:focus-visible .skill-pill-icon {
+          filter: saturate(1.05) brightness(1.06);
+        }
+
+        .skill-pill:hover .skill-pill-icon-fallback,
+        .skill-pill:focus-visible .skill-pill-icon-fallback {
+          opacity: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .skill-pill,
+          .skill-pill::before,
+          .skill-pill::after,
+          .skill-pill-icon,
+          .skill-pill-icon-fallback {
+            transition: none;
+          }
+
+          .skill-pill:hover,
+          .skill-pill:focus-visible,
+          .skill-pill:active {
+            transform: none;
+          }
+
+          .skill-pill::before {
+            display: none;
+          }
+        }
+      `}</style>
     </Column>
   );
 }
