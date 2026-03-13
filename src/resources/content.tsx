@@ -156,10 +156,14 @@ const about: About = {
           { name: "CorelDraw", icon: "coreldraw" },
           { name: "Premiere Pro", icon: "premiere" },
           { name: "Figma", icon: "figma" },
-          { name: "Branding" },
-          { name: "Print Production" },
-          { name: "Signage" },
-          { name: "Project Management" },
+          // TODO: add proper icon for Branding.
+          { name: "Branding", icon: "branding" },
+          // TODO: add proper icon for Print Production.
+          { name: "Print Production", icon: "print" },
+          // TODO: add proper icon for Signage.
+          { name: "Signage", icon: "signage" },
+          // TODO: add proper icon for Project Management.
+          { name: "Project Management", icon: "project-management" },
         ],
         images: [],
       },

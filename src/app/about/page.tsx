@@ -13,9 +13,20 @@ import {
   Row,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
+import { IconName, iconLibrary } from "@/resources/icons";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
+
+const SKILL_FALLBACK_ICON: IconName = "grid";
+
+const getSkillIcon = (icon?: string): IconName => {
+  if (icon && icon in iconLibrary) {
+    return icon as IconName;
+  }
+
+  return SKILL_FALLBACK_ICON;
+};
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -303,7 +314,11 @@ export default function About() {
                     {skill.tags && skill.tags.length > 0 && (
                       <Row wrap gap="8" paddingTop="8">
                         {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                          <Tag
+                            key={`${skill.title}-${tagIndex}`}
+                            size="l"
+                            prefixIcon={getSkillIcon(tag.icon)}
+                          >
                             {tag.name}
                           </Tag>
                         ))}
