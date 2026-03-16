@@ -35,32 +35,13 @@ const display: DisplayConfig = {
 const protectedRoutes: ProtectedRoutesConfig = {};
 
 // Import and set font for each variant
-import { Geist } from "next/font/google";
-import { Geist_Mono } from "next/font/google";
+const heading = { variable: "--font-heading", className: "", style: { fontFamily: "inherit" } } as FontsConfig["heading"];
 
-const heading = Geist({
-  variable: "--font-heading",
-  subsets: ["latin"],
-  display: "swap",
-});
+const body = { variable: "--font-body", className: "", style: { fontFamily: "inherit" } } as FontsConfig["body"];
 
-const body = Geist({
-  variable: "--font-body",
-  subsets: ["latin"],
-  display: "swap",
-});
+const label = { variable: "--font-label", className: "", style: { fontFamily: "inherit" } } as FontsConfig["label"];
 
-const label = Geist({
-  variable: "--font-label",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const code = Geist_Mono({
-  variable: "--font-code",
-  subsets: ["latin"],
-  display: "swap",
-});
+const code = { variable: "--font-code", className: "", style: { fontFamily: "monospace" } } as FontsConfig["code"];
 
 const fonts: FontsConfig = {
   heading: heading,
