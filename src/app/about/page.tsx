@@ -303,9 +303,25 @@ export default function About() {
                     {skill.tags && skill.tags.length > 0 && (
                       <Row wrap gap="8" paddingTop="8">
                         {skill.tags.map((tag, tagIndex) => (
-                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
-                            {tag.name}
-                          </Tag>
+                          (tag as { logo?: string }).logo ? (
+                            <Tag key={`${skill.title}-${tagIndex}`} size="l">
+                              <Row gap="8" vertical="center">
+                                <object
+                                  data={(tag as { logo?: string }).logo}
+                                  type="image/svg+xml"
+                                  aria-label={`${tag.name} logo`}
+                                  style={{ width: 17, height: 17 }}
+                                >
+                                  {tag.icon && <Icon name={tag.icon} />}
+                                </object>
+                                <span>{tag.name}</span>
+                              </Row>
+                            </Tag>
+                          ) : (
+                            <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                              {tag.name}
+                            </Tag>
+                          )
                         ))}
                       </Row>
                     )}

@@ -151,10 +151,11 @@ const about: About = {
       {
         title: "Professional Skills",
         tags: [
-          { name: "Photoshop", icon: "photoshop" },
-          { name: "Illustrator", icon: "illustrator" },
-          { name: "CorelDraw", icon: "coreldraw" },
-          { name: "Premiere Pro", icon: "premiere" },
+          // Brand logos sourced from Tabler Icons (MIT) and Simple Icons (CC0-1.0).
+          { name: "Photoshop", icon: "photoshop", logo: "/icons/skills/photoshop.svg" } as any,
+          { name: "Illustrator", icon: "illustrator", logo: "/icons/skills/illustrator.svg" } as any,
+          { name: "CorelDraw", icon: "coreldraw", logo: "/icons/skills/coreldraw.svg" } as any,
+          { name: "Premiere Pro", icon: "premiere", logo: "/icons/skills/premiere.svg" } as any,
           { name: "Figma", icon: "figma" },
           { name: "Branding" },
           { name: "Print Production" },
